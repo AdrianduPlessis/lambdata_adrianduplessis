@@ -24,3 +24,17 @@ def prove_that_this_even_works():
     Returns a string 'Proof.' as confirmation that the package works.
     '''
     return 'Proof.'
+
+class Section:
+    def __init__(self, id, num_fields=0):
+        self.id = id
+        self.num_fields = num_fields
+
+    def __repr_(self):
+        return f'Section: {self.id}'
+    
+    def __str__(self):
+        return f'This is section number {id}.'
+
+    def add_field(self):
+        self.num_fields += 1
