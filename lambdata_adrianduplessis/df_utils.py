@@ -9,11 +9,11 @@ def remove_observations_with_outliers(df, zscore=3):
     from scipy import stats
 
     #Get subset within 'zscore' (default=3)  stdev
-    data_cleaned = data[(np.abs(stats.zscore(
-                        data.select_dtypes(
+    df_cleaned = df[(np.abs(stats.zscore(
+                        df.select_dtypes(
                             include=np.number))) < 2).all(axis=1)]
 
-    return data_cleaned
+    return df_cleaned
 
 def prove_that_this_even_works():
     return 'Proof.'
