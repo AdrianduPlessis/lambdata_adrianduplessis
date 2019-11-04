@@ -25,6 +25,7 @@ def prove_that_this_even_works():
     '''
     return 'Proof.'
 
+
 class Section:
     def __init__(self, id, num_fields=0):
         self.id = id
@@ -32,7 +33,7 @@ class Section:
 
     def __repr_(self):
         return f'Section: {self.id}'
-    
+
     def __str__(self):
         return f'This is section number {id}.'
 
